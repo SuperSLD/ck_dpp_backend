@@ -49,7 +49,7 @@ jobs:
             mkdir ${{ steps.global_env.outputs.ARTIFACT_NAME }}
             cp target/${{ steps.global_env.outputs.ARTIFACT_NAME }}.war /var/lib/tomcat9/webapps/${{ steps.global_env.outputs.ARTIFACT_NAME }}
             rm -r -f target
-            cd roadmap
+            cd ${{ steps.global_env.outputs.ARTIFACT_NAME }}
             unzip ${{ steps.global_env.outputs.ARTIFACT_NAME }}.war
             rm ${{ steps.global_env.outputs.ARTIFACT_NAME }}.war
             
